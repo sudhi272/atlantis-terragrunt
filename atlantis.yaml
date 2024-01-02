@@ -2,7 +2,7 @@
 version: 3
 projects:
 - name: dev
-  dir: ./terragrunt/dev/instance1
+  dir: ./terragrunt/dev/instance1/
   workspace: default
   apply_requirements: [mergeable, approved]
   workflow: myworkflow
@@ -13,7 +13,7 @@ workflows:
       - run: echo "In Terraform Init and Plan"
       - run: terragrunt init
       - run: terragrunt plan
-      
+
     apply:
       steps:
       - run: echo "In Terraform Apply"
