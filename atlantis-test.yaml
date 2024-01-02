@@ -1,0 +1,21 @@
+# # atlantis.yaml
+version: 3
+projects:
+- name: dev
+  dir: ./terragrunt/test/demoinstance
+  workspace: default
+  apply_requirements: [mergeable, approved]
+  workflow: myworkflow
+workflows:
+  myworkflow:
+    plan:
+      steps:
+      - run: echo "In Terraform Init and Plan"
+      - run: terragrunt init
+      - run: terragrunt plan
+      
+    apply:
+      steps:
+      - run: echo "In Terraform Apply"
+      - apply
+
