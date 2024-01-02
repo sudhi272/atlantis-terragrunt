@@ -2,7 +2,7 @@
 version: 3
 projects:
 - dir: ./atlantis_instance
-  name: ec2
+  name: instance_provision
   workflow: custom1
 workflows:
   custom1:
