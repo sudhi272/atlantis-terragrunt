@@ -2,7 +2,7 @@
 version: 3
 projects:
 - name: ec2
-  dir: ./atlantis_instance
+  dir: ./ec2
   workspace: default
   apply_requirements: [mergeable, approved]
   workflow: myworkflow
