@@ -3,9 +3,9 @@ version: 3
 projects:
 - dir: ./atlantis_instance
   name: instance_provision
-  workflow: custom1
+  workflow: provision
 workflows:
-  custom1:
+  provision:
     plan:
       steps:
       - run: echo "In Terragrunt Init and Plan"
