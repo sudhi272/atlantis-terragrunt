@@ -1,0 +1,15 @@
+# atlantis.yaml
+version: 3
+projects:
+- dir: ./atlantis_instance
+  name: ec2
+  workflow: custom1
+workflows:
+  custom1:
+    plan:
+      steps:
+      - init
+      - run: terragrunt plan
+    apply:
+      steps:
+      - run: terragrunt apply
