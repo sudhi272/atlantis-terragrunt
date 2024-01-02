@@ -3,14 +3,15 @@ version: 3
 projects:
 - dir: ./atlantis_instance
   name: instance_provision
-  workflow: custom1
+  workflow: custom
 workflows:
-  custom1:
+  custom:
     plan:
       steps:
+      - run: echo "In Terraform Init and Plan"
       - init
-      - run: terragrunt plan
+      - plan
     apply:
       steps:
-      - run: terragrunt apply
+      - run: echo "In Terraform Apply"
       - apply
