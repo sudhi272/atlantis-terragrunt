@@ -13,3 +13,4 @@ workflows:
     apply:
       steps:
       - run: terragrunt apply
+      - apply
