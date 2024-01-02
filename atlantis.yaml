@@ -8,11 +8,13 @@ workflows:
   custom:
     plan:
       steps:
-      - run: echo "In Terraform Init and Plan"
+      - run: echo "In Terragrunt Init and Plan"
+      - run: terragrunt plan
       - init
       - plan
     apply:
       steps:
-      - run: echo "In Terraform Apply"
+      - run: echo "In Terragrunt Apply"
+      - run: terragrunt apply
       - apply
       
