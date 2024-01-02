@@ -4,7 +4,7 @@ projects:
 - name: test
   dir: ./terragrunt/test/demoinstance
   workspace: default
-  apply_requirements: [mergeable, approved]
+  apply_requirements: [mergeable]
   workflow: myworkflow
 workflows:
   myworkflow:
