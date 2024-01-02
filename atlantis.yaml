@@ -10,8 +10,7 @@ workflows:
       steps:
       - run: echo "In Terragrunt Init and Plan"
       - run: terragrunt plan
-      - init
-      - plan
+
     apply:
       steps:
       - run: echo "In Terragrunt Apply"
