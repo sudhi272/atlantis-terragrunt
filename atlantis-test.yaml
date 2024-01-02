@@ -17,5 +17,5 @@ workflows:
     apply:
       steps:
       - run: echo "In Terraform Apply"
-      - apply
+      - run: terragrunt apply
 
