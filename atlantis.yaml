@@ -1,8 +1,8 @@
 # # atlantis.yaml
 version: 3
 projects:
-- name: atlantis_instance
-  dir: ./atlantis_instance
+- name: dev
+  dir: ./terragrunt/dev/instance1
   workspace: default
   apply_requirements: [mergeable, approved]
   workflow: myworkflow
