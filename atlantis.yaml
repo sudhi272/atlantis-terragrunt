@@ -1,8 +1,8 @@
 # # atlantis.yaml
 version: 3
 projects:
-- name: ec2
-  dir: ./ec2
+- name: atlantis_instance
+  dir: ./atlantis_instance
   workspace: default
   apply_requirements: [mergeable, approved]
   workflow: myworkflow
