@@ -11,7 +11,8 @@ workflows:
     plan:
       steps:
       - run: echo "In Terraform Init and Plan"
-      - init
+      - run: terragrunt init
+      - run: terragrunt plan
       - plan:
           extra_args: ["-lock=false"]
     apply:
