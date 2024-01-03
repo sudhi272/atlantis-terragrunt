@@ -3,7 +3,7 @@ include {
 }
 
 terraform {
-  source  = "../../../terraform-aws-ec2-instance"
+  source  = "../../../terraform-aws-ec2"
 }
 
 inputs = {
