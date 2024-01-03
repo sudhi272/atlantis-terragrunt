@@ -10,6 +10,7 @@ projects:
   workflow: myworkflow
   autoplan:
     enabled: true
+    when_modified: ["*.yaml", "*.hcl"]
 
 - name: test
   dir: ./terragrunt/test/demoinstance
@@ -17,7 +18,8 @@ projects:
   apply_requirements: [mergeable]
   workflow: myworkflow
   autoplan:
-    enabled: true  
+    enabled: true
+    when_modified: ["*.yaml", "*.hcl"]  
 
 - name: stage
   dir: ./terragrunt/stage
@@ -25,7 +27,8 @@ projects:
   apply_requirements: [mergeable]
   workflow: myworkflow
   autoplan:
-    enabled: true   
+    enabled: true
+    when_modified: ["*.yaml", "*.hcl"]   
    
 workflows:
   myworkflow:
