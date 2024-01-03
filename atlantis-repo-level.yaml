@@ -8,18 +8,24 @@ projects:
   workspace: default
   apply_requirements: [mergeable]
   workflow: myworkflow
+  autoplan:
+    enabled: true
 
 - name: test
   dir: ./terragrunt/test/demoinstance
   workspace: default
   apply_requirements: [mergeable]
   workflow: myworkflow
+  autoplan:
+    enabled: true  
 
 - name: stage
   dir: ./terragrunt/stage
   workspace: default
   apply_requirements: [mergeable]
-  workflow: myworkflow 
+  workflow: myworkflow
+  autoplan:
+    enabled: true   
    
 workflows:
   myworkflow:
