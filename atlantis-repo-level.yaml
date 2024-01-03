@@ -1,0 +1,36 @@
+# # atlantis.yaml
+version: 3
+automerge: true
+projects:
+
+- name: dev
+  dir: ./terragrunt/dev/instance1
+  workspace: default
+  apply_requirements: [mergeable]
+  workflow: myworkflow
+
+- name: test
+  dir: ./terragrunt/test/demoinstance
+  workspace: default
+  apply_requirements: [mergeable]
+  workflow: myworkflow
+
+- name: stage
+  dir: ./terragrunt/stage
+  workspace: default
+  apply_requirements: [mergeable]
+  workflow: myworkflow 
+   
+workflows:
+  myworkflow:
+    plan:
+      steps:
+      - run: echo "In Terraform Init and Plan"
+      - run: terragrunt init
+      - run: terragrunt plan
+      
+    apply:
+      steps:
+      - run: echo "In Terraform Apply"
+      - run: terragrunt apply -auto-approve
+
