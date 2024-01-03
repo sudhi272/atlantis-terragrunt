@@ -1,6 +1,8 @@
 # # atlantis.yaml
 version: 3
 automerge: true
+autodiscover:
+  mode: "enabled"
 projects:
 
 - name: dev
