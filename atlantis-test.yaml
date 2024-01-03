@@ -1,6 +1,11 @@
 # # atlantis.yaml
 version: 3
 projects:
+- name: stage
+  dir: ./terragrunt/stage
+  workspace: default
+  apply_requirements: [mergeable]
+  workflow: myworkflow
 - name: test
   dir: ./terragrunt/test/demoinstance
   workspace: default
