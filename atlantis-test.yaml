@@ -6,6 +6,11 @@ projects:
   workspace: default
   apply_requirements: [mergeable]
   workflow: myworkflow
+- name: dev
+  dir: ./terragrunt/dev/instance1
+  workspace: default
+  apply_requirements: [mergeable]
+  workflow: myworkflow  
 workflows:
   myworkflow:
     plan:
