@@ -9,12 +9,6 @@ projects:
   apply_requirements: [mergeable]
   workflow: myworkflow
 
-- name: dev1
-  dir: ./terragrunt/dev/instance2
-  workspace: default
-  apply_requirements: [mergeable]
-  workflow: myworkflow
-
 - name: test
   dir: ./terragrunt/test/demoinstance
   workspace: default
