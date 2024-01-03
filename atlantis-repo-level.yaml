@@ -23,20 +23,13 @@ projects:
       
 workflows:
   myworkflow:
-    # plan:
-    #   steps:
-    #   - run: echo "In Terraform Init and Plan"
-    #   - run: terragrunt init
-    #   - run: terragrunt plan
-      
-    # apply:
-    #   steps:
-    #   - run: echo "In Terraform Apply"
-    #   - run: terragrunt apply -auto-approve
     plan:
       steps:
-      - run: if [ "$COMMENT_ARGS" = "-\d\e\s\t\r\o\y" ]; then echo "-destroy"; terragrunt plan -no-color -out $PLANFILE -destroy; else terragrunt plan ; fi
+      - run: echo "In Terraform Init and Plan"
+      - run: terragrunt init
+      - run: terragrunt plan
+      
     apply:
       steps:
-      - run: if [ "$COMMENT_ARGS" = "-\d\e\s\t\r\o\y" ]; then echo "-destroy"; terragrunt destroy --terragrunt-non-interactive -auto-approve; else echo "apply"; terragrunt apply --terragrunt-non-interactive -auto-approve; fi    
-
+      - run: echo "In Terraform Apply"
+      - run: terragrunt apply -auto-approve
