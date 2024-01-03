@@ -22,7 +22,13 @@ projects:
   workspace: default
   apply_requirements: [mergeable]
   workflow: myworkflow 
-   
+
+- name: prod
+  dir: ./terragrunt/stage
+  workspace: default
+  apply_requirements: [mergeable]
+  workflow: myworkflow
+      
 workflows:
   myworkflow:
     plan:
