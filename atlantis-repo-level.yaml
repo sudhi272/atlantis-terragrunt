@@ -16,7 +16,7 @@ projects:
   workflow: myworkflow
 
 - name: stage
-  dir: ./terragrunt/stage
+  dir: ./terragrunt/stage/*
   workspace: default
   apply_requirements: [mergeable]
   workflow: myworkflow
