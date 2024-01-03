@@ -33,4 +33,3 @@ workflows:
       steps:
       - run: echo "In Terraform Apply"
       - run: terragrunt apply -auto-approve
-
