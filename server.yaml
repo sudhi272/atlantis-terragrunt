@@ -1,0 +1,24 @@
+# Public URL where Atlantis is accessible
+atlantis_url: "ATLANTIS SERVER OR LB URL"
+
+# Path to the repos.yaml file that contains repository-level configurations
+repo_config: "/var/atlantis.yaml"
+
+#Git user
+gh-user: "YOUR-GITHUB-USERNAME"
+
+#Git token
+gh-token: "YOUR-GITHUB-ACCESS-TOKEN"
+
+#16 Char random string for webhook secret
+gh-webhook-secret: "YOUR-SECRET-STRING-FOR-WEBHOOK"
+
+#Allowed Repos. Eg: github.com/example/terraform
+repo-allowlist: "YOUR-GITHUB-REPO"
+
+#Credentials for Terraform run
+extra_env_vars:
+  - name: AWS_ACCESS_KEY_ID
+    value: "YOUR-AWS-ACCESSKEY"
+  - name: AWS_SECRET_ACCESS_KEY
+    value: "YOUR-AWS-SECRET-KEY"
