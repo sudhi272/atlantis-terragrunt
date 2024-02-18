@@ -12,4 +12,3 @@ inputs = {
   instance_type = "t2.micro"
   tags =  "my_ec2_instance_dev"
 }
-# newline2
