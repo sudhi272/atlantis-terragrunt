@@ -41,3 +41,4 @@ COPY atlantis-repo-config-backup.yaml /var/atlantis.yaml
 # Command to run when the container starts
 CMD ["atlantis", "server", "--config", "/etc/atlantis/server.yaml"]
 
+#commit1
