@@ -25,7 +25,6 @@ workflows:
   myworkflow:
     plan:
       steps:
-      - run: echo "In Terraform Init and Plan"
       - run: terragrunt init
       - run: terragrunt plan
       
